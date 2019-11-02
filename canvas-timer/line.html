@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color:ivory;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px soldier #CCC; display: block; margin:auto auto;">
+  </canvas>
+  <script>
+    // .moveTo(x,y)
+    // .lineTo(x,y)
+
+    // .beginPath(x,y)
+    // .closePath()
+
+    // .lineWidth()
+    // .strokeStyle()
+    // .storke()
+
+    // .fillStyle()
+    // .fill()  
+
+    window.onload = function() {
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      context.moveTo(100,100);
+      context.lineTo(700,700);
+
+      context.lineTo(100,700);
+      context.lineTo(100,100);
+
+      context.lineWidth = 5;
+      context.strokeStyle = "#FF0000";
+
+      context.stroke();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background-color:ivory;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1024" height="768" style="border: 1px soldier #CCC; display: block; margin:auto auto;">
+  </canvas>
+  <script>
+
+    // .moveTo(x,y)
+    // .lineTo(x,y)
+
+    // .beginPath(x,y)
+    // .closePath()
+
+    // .lineWidth()
+    // .strokeStyle()
+    // .storke()
+
+    // .fillStyle()
+    // .fill()  
+
+  //绘制弧线
+  //  .art(
+  //    centerX,centerY,radius,
+  //    startingAngle,endingAngle,
+  //    anticlockwise = false, //瞬时间，逆时针。
+  //  )
+
+    window.onload = function() {
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+
+      // ctx.lineWidth = 5;
+      // ctx.strokeStyle = '#005588';
+      // ctx.moveTo(100,100);
+      // ctx.lineTo(700,700);
+      // ctx.lineTo(100,700);
+      // ctx.lineTo(100,100);
+      // ctx.stroke();
+      
+      // ctx.beginPath();
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = "#FF0000";
+      ctx.arc(300, 300, 200, 0, Math.PI * 0.5, true);
+      // ctx.closePath();
+      ctx.stroke();
+
+    }
+  </script>
+</body>
+</html>
